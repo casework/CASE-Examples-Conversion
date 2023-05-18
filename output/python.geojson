@@ -1,0 +1,23 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "addressType": null,
+                "street": "38 Bad Guy Headquarters st.",
+                "locality": "Paris",
+                "region": null,
+                "postalCode": "F-75002",
+                "country": "France"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.331199,
+                    48.860346
+                ]
+            }
+        }
+    ]
+}

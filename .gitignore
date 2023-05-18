@@ -5,3 +5,7 @@
 # dotnet
 dotnet/bin
 dotnet/obj
+
+# Python
+*.pyc
+/venv

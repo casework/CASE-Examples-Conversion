@@ -12,7 +12,7 @@ errors. It is intended to be used as a starting point for a more robust solution
 dotnet build
 
 # Run the built project
-dotnet run <input.ttl> <output.geojson>
+dotnet run <input.json> <output.geojson>
 ```
 
 ## Example
@@ -20,3 +20,7 @@ dotnet run <input.ttl> <output.geojson>
 ```bash
 dotnet run ../data/locations.json ../output/locations.geojson
 ```
+
+## Dependencies
+This repository depends on the dotNetRDF library. This dependency is managed by NuGet and will be automatically installed
+when the project is built.
