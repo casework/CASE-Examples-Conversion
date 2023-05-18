@@ -17,4 +17,3 @@ Each directory contains a README with more information about the specific implem
 | -------- | ---------------------------------------------------------- |
 | input    | The input file containing the CASE graph in JSON-LD format |
 | output   | The output file into which to write the GeoJSON file       |
-

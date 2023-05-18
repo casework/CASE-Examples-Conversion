@@ -47,7 +47,7 @@ public static class Helpers
         var json = JsonConvert.SerializeObject(geoJSON, Formatting.Indented, new JsonSerializerSettings{
             NullValueHandling = NullValueHandling.Ignore
         });
-        
+
         File.WriteAllText(outputPath, json);
     }
 }

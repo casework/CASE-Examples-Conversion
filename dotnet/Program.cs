@@ -50,9 +50,9 @@ const string query =
                         ?nLocation uco-core:hasFacet ?nLatLongFacet .
                         ?nLatLongFacet a uco-location:LatLongCoordinatesFacet .
                         OPTIONAL { ?nLatLongFacet uco-location:latitude ?lLatitude . }
-                        OPTIONAL { ?nLatLongFacet uco-location:longitude ?lLongitude . }        
+                        OPTIONAL { ?nLatLongFacet uco-location:longitude ?lLongitude . }
                     }
-                    
+
                     OPTIONAL {
                         ?nLocation uco-core:hasFacet ?nSimpleAddressFacet .
                         ?nSimpleAddressFacet a uco-location:SimpleAddressFacet .
@@ -126,8 +126,12 @@ foreach (var result in results)
         }
     }
 
-    // Add the record to the list
-    records.Add(record);
+    // Add the record to the list if the latitude and longitude are present and not 0
+    if (double.TryParse(record.Latitude, out var latitude) && double.TryParse(record.Longitude, out var longitude) &&
+        latitude != 0 && longitude != 0)
+    {
+        records.Add(record);
+    }
 }
 
 // Convert the list of records into a single GeoJSON object

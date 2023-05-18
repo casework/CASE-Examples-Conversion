@@ -15,22 +15,6 @@
           48.860346
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "street": "20341 Whitworth Institute 405 N. Whitworth",
-        "locality": "Seattle",
-        "region": "WA",
-        "postalCode": "98052"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.0,
-          0.0
-        ]
-      }
     }
   ],
   "type": "FeatureCollection"
