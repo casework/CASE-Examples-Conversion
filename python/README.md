@@ -15,13 +15,13 @@ python3 -m venv venv
 pip install rdflib
 
 # Run the built project
-python3 case2geojson.py <input.json> <output.geojson>
+python3 CASE2GeoJSON.py <input.json> <output.geojson>
 ```
 
 ## Example
 
 ```bash
-python3 case2geojson.py ../data/locations.json ../output/locations.geojson
+python3 CASE2GeoJSON.py ../data/locations.json ../output/locations.geojson
 ```
 
 ## Dependencies

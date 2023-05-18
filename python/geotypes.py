@@ -57,7 +57,9 @@ class Feature:
         return dict(
             type=self.type,
             properties=self.properties.reprJSON(),
-            geometry=self.geometry.reprJSON(),
+            geometry=self.geometry.reprJSON()
+            if hasattr(self, "geometry") and self.geometry is not None
+            else None,
         )
 
 

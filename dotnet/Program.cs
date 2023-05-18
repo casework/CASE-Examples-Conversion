@@ -126,12 +126,7 @@ foreach (var result in results)
         }
     }
 
-    // Add the record to the list if the latitude and longitude are present and not 0
-    if (double.TryParse(record.Latitude, out var latitude) && double.TryParse(record.Longitude, out var longitude) &&
-        latitude != 0 && longitude != 0)
-    {
-        records.Add(record);
-    }
+    records.Add(record);
 }
 
 // Convert the list of records into a single GeoJSON object

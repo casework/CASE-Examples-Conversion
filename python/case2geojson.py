@@ -3,7 +3,7 @@ import sys
 from os.path import exists, isdir, isfile
 
 from geotypes import GeoRecord
-from geoutilities import records_to_geojson
+from geoutilities import records_to_geojson, remove_nulls
 from rdflib import Graph
 
 # Parse the arguments from the CLI to get the input and output filenames
@@ -63,21 +63,24 @@ records: list[GeoRecord] = []
 
 # Loop through the results and add them to the list of GeoRecords if the latitude and longitude are present
 for row in results:
-    if row.lLatitude is not None and row.lLongitude is not None:
-        geo_record: GeoRecord = GeoRecord()
-        geo_record.Latitude = row.lLatitude
-        geo_record.Longitude = row.lLongitude
-        geo_record.AddressType = row.lAddressType
-        geo_record.Country = row.lCountry
-        geo_record.Locality = row.lLocality
-        geo_record.PostalCode = row.lPostalCode
-        geo_record.Region = row.lRegion
-        geo_record.Street = row.lStreet
-        records.append(geo_record)
+    geo_record: GeoRecord = GeoRecord()
+    geo_record.Latitude = row.lLatitude
+    geo_record.Longitude = row.lLongitude
+    geo_record.AddressType = row.lAddressType
+    geo_record.Country = row.lCountry
+    geo_record.Locality = row.lLocality
+    geo_record.PostalCode = row.lPostalCode
+    geo_record.Region = row.lRegion
+    geo_record.Street = row.lStreet
+    records.append(geo_record)
 
 # Convert the data to a GeoJSON structured object
 geoJSON = records_to_geojson(records)
 
+# Remove null values from the GeoJSON object
+geoDict: dict = geoJSON.reprJSON()
+geoDict = remove_nulls(geoDict)
+
 # Write the GeoJSON object to the output file
 with open(output_filename, "w") as output_file:
-    output_file.write(json.dumps(geoJSON.reprJSON(), indent=4))
+    output_file.write(json.dumps(geoDict, indent=4))

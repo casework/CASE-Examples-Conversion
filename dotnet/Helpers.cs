@@ -24,16 +24,20 @@ public static class Helpers
                     postalCode = record.PostalCode,
                     country = record.Country
                 },
-                geometry = new GeoJSON.Geometry
+
+            };
+
+            // If the coordinates are 0,0 then don't add the record to the GeoJSON object
+            // Add the record to the list if the latitude and longitude are present and not 0
+            if (double.TryParse(record.Latitude, out var latitude) && double.TryParse(record.Longitude, out var longitude) &&
+                latitude != 0 && longitude != 0)
+            {
+                feature.geometry = new GeoJSON.Geometry
                 {
                     type = "Point",
-                    coordinates = new List<double>
-                    {
-                        double.Parse(record.Longitude ?? "0"),
-                        double.Parse(record.Latitude ?? "0")
-                    }
-                }
-            };
+                    coordinates = new List<double> { longitude, latitude }
+                };
+            }
 
             geoJSON.features.Add(feature);
         }
