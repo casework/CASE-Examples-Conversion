@@ -1,0 +1,7 @@
+# IDE settings
+.vscode/
+.vs/
+
+# dotnet
+dotnet/bin
+dotnet/obj
