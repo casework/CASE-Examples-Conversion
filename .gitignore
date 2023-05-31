@@ -12,4 +12,4 @@ dotnet/obj
 /venv
 
 # Java
-java/target
+java/**/target
