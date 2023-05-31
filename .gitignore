@@ -1,6 +1,7 @@
 # IDE settings
 .vscode/
 .vs/
+.idea/
 
 # dotnet
 dotnet/bin
@@ -9,3 +10,6 @@ dotnet/obj
 # Python
 *.pyc
 /venv
+
+# Java
+java/target
