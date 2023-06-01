@@ -15,8 +15,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.18</maven.compiler.source>
+    <maven.compiler.target>1.18</maven.compiler.target>
     <exec.mainClass>org.caseontology.examples.CASE2Geo</exec.mainClass>
   </properties>
 
@@ -26,6 +26,33 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.jena</groupId>
+      <artifactId>apache-jena-libs</artifactId>
+      <version>3.9.0</version>
+      <exclusions>
+        <exclusion>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-tdb</artifactId>
+        </exclusion>
+    </exclusions>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.jsonld-java</groupId>
+      <artifactId>jsonld-java</artifactId>
+      <version>0.13.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.10.1</version>
     </dependency>
   </dependencies>
 

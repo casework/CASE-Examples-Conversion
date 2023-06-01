@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          2.331199,
+          48.860346
+        ]
+      },
+      "properties": {
+        "street": "38 Bad Guy Headquarters st.",
+        "locality": "Paris",
+        "postalCode": "F-75002",
+        "country": "France"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "street": "20341 Whitworth Institute 405 N. Whitworth",
+        "locality": "Seattle",
+        "region": "WA",
+        "postalCode": "98052"
+      }
+    }
+  ]
+}
