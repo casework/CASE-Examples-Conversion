@@ -52,7 +52,6 @@ jobs:
       # Run the Python CASE conversion example
       - name: Run CASE Conversion
         run: |
-            ls
             python3 CASE2GeoJSON.py ../data/geo.json ../output/python.geojson
             cat ../output/python.geojson
         working-directory: ./python/
