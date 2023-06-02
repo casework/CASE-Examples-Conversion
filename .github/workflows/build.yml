@@ -1,4 +1,4 @@
-name: CASE Validate
+name: Build Jobs
 
 on: [ push ]
 
@@ -76,11 +76,11 @@ jobs:
       # Build the project
       - name: Build Project
         run: mvn compile assembly:single
-        working-directory: ./java/
+        working-directory: ./java/case2geo/
 
       # Run the Java CASE conversion example
       - name: Run CASE Conversion
         run: |
             java -jar ./target/case2geo-0.1.0.jar ../../data/geo.json ../../output/java.geojson
             cat ../output/java.geojson
-        working-directory: ./java/
+        working-directory: ./java/case2geo/
