@@ -1,6 +1,7 @@
 import json
 import sys
 from os.path import exists, isdir, isfile
+from typing import List
 
 from geotypes import GeoRecord
 from geoutilities import records_to_geojson, remove_nulls
@@ -59,7 +60,7 @@ query: str = """
 results = graph.query(query)
 
 # Define the list of GeoRecords
-records: list[GeoRecord] = []
+records: List[GeoRecord] = []
 
 # Loop through the results and add them to the list of GeoRecords if the latitude and longitude are present
 for row in results:

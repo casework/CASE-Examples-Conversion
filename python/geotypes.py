@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import List, Optional
 
 
 class GeoRecord:
@@ -36,7 +36,7 @@ class Properties:
 
 class Geometry:
     type: Optional[str]
-    coordinates: list[float] = []
+    coordinates: List[float] = []
 
     def reprJSON(self):
         """
@@ -65,7 +65,7 @@ class Feature:
 
 class GeoJSON:
     type: Optional[str]
-    features: list[Feature] = []
+    features: List[Feature] = []
 
     def reprJSON(self):
         """
