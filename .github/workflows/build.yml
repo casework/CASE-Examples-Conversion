@@ -1,0 +1,32 @@
+name: CASE Validate
+
+on: [ push ]
+
+# Build all of the projects and run them against the CASE graph
+
+jobs:
+  dotnet:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository to be packaged
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install the .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3.2.0
+        with:
+          dotnet-version: 6.x
+
+      # Build the project
+      - name: Build
+        run: dotnet build
+        working-directory: ./dotnet/
+
+      # Run the built CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            dotnet run ../data/geo.json ../output/dotnet.geojson
+            cat ../output/dotnet.geojson
+        working-directory: ./dotnet/
