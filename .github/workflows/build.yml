@@ -69,6 +69,13 @@ jobs:
 
   java:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Test oldest and most current supported versions, per:
+        # https://adoptium.net/support/
+        java-version:
+          - '11'
+          - '20'
     steps:
 
       # Get the code from the repository
@@ -80,7 +87,7 @@ jobs:
         uses: actions/setup-java@v3.11.0
         with:
             distribution: 'temurin'
-            java-version: '18'
+            java-version: ${{ matrix.java-version }}
             cache: 'maven'
 
       # Build the project
