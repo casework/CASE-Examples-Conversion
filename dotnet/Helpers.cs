@@ -2,6 +2,9 @@ using Newtonsoft.Json;
 
 public static class Helpers
 {
+    ///
+    /// <summary>Convert the list of records into a single GeoJSON object</summary>
+    ///
     public static GeoJSON.RootObject ConvertToGeoJSON(IEnumerable<GeoRecord> records)
     {
         // Convert the list of records into a single GeoJSON object
@@ -45,6 +48,9 @@ public static class Helpers
         return geoJSON;
     }
 
+    ///
+    /// <summary>Write the GeoJSON object to a file</summary>
+    ///
     public static void WriteGeoJSON(GeoJSON.RootObject geoJSON, string outputPath)
     {
         // Write the GeoJSON object to a file
