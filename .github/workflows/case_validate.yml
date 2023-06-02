@@ -1,6 +1,10 @@
 name: CASE Validate
 
-on: [ push, pull_request ]
+on:
+  push:
+  pull_request:
+    branches:
+      - main
 
 # Ensure all of the files in /data/ are valid CASE graphs.
 
