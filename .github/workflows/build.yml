@@ -37,6 +37,13 @@ jobs:
 
   python:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Test oldest and most current supported versions, per:
+        # https://www.python.org/downloads/
+        python-version:
+          - '3.8'
+          - '3.11'
     steps:
 
       # Get the code from the repository
@@ -47,7 +54,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4.6.1
         with:
-          python-version: 3.9
+          python-version: ${{ matrix.python-version }}
 
       # Install the rdflib dependency
       - name: Install Dependencies

@@ -1,7 +1,9 @@
+from typing import List
+
 from geotypes import Feature, GeoJSON, Geometry, GeoRecord, Properties
 
 
-def records_to_geojson(records: list[GeoRecord]) -> GeoJSON:
+def records_to_geojson(records: List[GeoRecord]) -> GeoJSON:
     """
     Converts a list of GeoRecords to a GeoJSON object.
 
