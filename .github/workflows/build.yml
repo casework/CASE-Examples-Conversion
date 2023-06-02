@@ -1,0 +1,86 @@
+name: Build Jobs
+
+on: [ push ]
+
+# Build all of the projects and run them against the CASE graph
+
+jobs:
+  dotnet:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install the .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3.2.0
+        with:
+          dotnet-version: 6.x
+
+      # Build the project
+      - name: Build
+        run: dotnet build
+        working-directory: ./dotnet/
+
+      # Run the built CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            dotnet run ../data/geo.json ../output/dotnet.geojson
+            cat ../output/dotnet.geojson
+        working-directory: ./dotnet/
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install Python
+      - name: Setup Python
+        uses: actions/setup-python@v4.6.1
+        with:
+          python-version: 3.9
+
+      # Install the rdflib dependency
+      - name: Install Dependencies
+        run: pip3 install rdflib
+
+      # Run the Python CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            ls
+            python3 CASE2GeoJSON.py ../data/geo.json ../output/python.geojson
+            cat ../output/python.geojson
+        working-directory: ./python/
+
+  java:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install Java
+      - name: Setup Java
+        uses: actions/setup-java@v3.11.0
+        with:
+            distribution: 'temurin'
+            java-version: '18'
+            cache: 'maven'
+
+      # Build the project
+      - name: Build Project
+        run: mvn compile assembly:single
+        working-directory: ./java/case2geo/
+
+      # Run the Java CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            java -jar ./target/case2geo-0.1.0.jar ../../data/geo.json ../../output/java.geojson
+            cat ../../output/java.geojson
+        working-directory: ./java/case2geo/

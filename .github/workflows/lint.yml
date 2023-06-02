@@ -1,0 +1,20 @@
+name: Lint
+
+on: [ push ]
+
+# Build all of the projects and run them against the CASE graph
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install pre-commit and run it
+      - name: Pre-commit Checks
+        run: |
+          pip -q install pre-commit
+          pre-commit run --all-files
