@@ -19,4 +19,4 @@ jobs:
         with:
           case-path: "./data/"
           case-version: "case-1.2.0"
-          extension-filter: "jsonld"
+          extension-filter: "json"
