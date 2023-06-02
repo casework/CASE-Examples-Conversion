@@ -11,6 +11,13 @@ on:
 jobs:
   dotnet:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Test oldest and most current supported versions, per:
+        # https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core
+        dotnet-version:
+          - '6.x'
+          - '7.x'
     steps:
 
       # Get the code from the repository
@@ -21,7 +28,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3.2.0
         with:
-          dotnet-version: 6.x
+          dotnet-version: ${{ matrix.dotnet-version }}
 
       # Build the project
       - name: Build
