@@ -1,6 +1,5 @@
 # CASE Conversion Examples
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 ![CASE Version](https://img.shields.io/badge/CASE%20Version-1.2.0-brightgreen.svg)
 [![Lint](https://github.com/casework/CASE-Examples-Conversion/actions/workflows/lint.yml/badge.svg)](https://github.com/casework/CASE-Examples-Conversion/actions/workflows/lint.yml)
 [![CASE Validate](https://github.com/casework/CASE-Examples-Conversion/actions/workflows/case_validate.yml/badge.svg)](https://github.com/casework/CASE-Examples-Conversion/actions/workflows/case_validate.yml)
