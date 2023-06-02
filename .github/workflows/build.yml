@@ -82,5 +82,5 @@ jobs:
       - name: Run CASE Conversion
         run: |
             java -jar ./target/case2geo-0.1.0.jar ../../data/geo.json ../../output/java.geojson
-            cat ../output/java.geojson
+            cat ../../output/java.geojson
         working-directory: ./java/case2geo/
