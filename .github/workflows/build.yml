@@ -47,11 +47,39 @@ jobs:
 
       # Install the rdflib dependency
       - name: Install Dependencies
-        run: pip install rdflib
+        run: pip3 install rdflib
 
       # Run the Python CASE conversion example
       - name: Run CASE Conversion
         run: |
+            ls
             python3 CASE2GeoJSON.py ../data/geo.json ../output/python.geojson
             cat ../output/python.geojson
         working-directory: ./python/
+
+  java:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install Java
+      - name: Setup Java
+        uses: actions/setup-java@v3.11.0
+        with:
+            java-version: '18'
+            cache: 'maven'
+
+      # Build the project
+      - name: Build Project
+        run: mvn compile assembly:single
+        working-directory: ./java/
+
+      # Run the Java CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            java -jar ./target/case2geo-0.1.0.jar ../../data/geo.json ../../output/java.geojson
+            cat ../output/java.geojson
+        working-directory: ./java/
