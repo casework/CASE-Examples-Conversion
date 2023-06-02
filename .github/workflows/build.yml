@@ -1,6 +1,10 @@
 name: Build Jobs
 
-on: [ push ]
+on:
+  push:
+  pull_request:
+    branches:
+      - main
 
 # Build all of the projects and run them against the CASE graph
 
