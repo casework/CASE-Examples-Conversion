@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # Get the code from the repository to be packaged
+      # Get the code from the repository
       - name: Get Repo
         uses: actions/checkout@v3
 
@@ -30,3 +30,28 @@ jobs:
             dotnet run ../data/geo.json ../output/dotnet.geojson
             cat ../output/dotnet.geojson
         working-directory: ./dotnet/
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v3
+
+      # Install Python
+      - name: Setup Python
+        uses: actions/setup-python@v4.6.1
+        with:
+          python-version: 3.9
+
+      # Install the rdflib dependency
+      - name: Install Dependencies
+        run: pip install rdflib
+
+      # Run the Python CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            python3 CASE2GeoJSON.py ../data/geo.json ../output/python.geojson
+            cat ../output/python.geojson
+        working-directory: ./python/
