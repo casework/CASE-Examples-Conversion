@@ -39,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        # Test oldest and most current supported versions, per:
+        # https://www.python.org/downloads/
         python-version:
           - '3.8'
           - '3.11'
