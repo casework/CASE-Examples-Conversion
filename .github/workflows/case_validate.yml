@@ -19,7 +19,7 @@ jobs:
 
       # Validate the CASE graphs in the /data/ directory
       - name: CASE Validate
-        uses: kchason/case-validation-action@v2.7.0
+        uses: kchason/case-validation-action@v2.8.0
         with:
           case-path: "./data/"
           case-version: "case-1.2.0"
