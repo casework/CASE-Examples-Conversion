@@ -55,7 +55,7 @@ public static class Helpers
     {
         // Write the GeoJSON object to a file
         var json = JsonConvert.SerializeObject(geoJSON, Formatting.Indented, new JsonSerializerSettings{
-            NullValueHandling = NullValueHandling.Ignore
+            NullValueHandling = NullValueHandling.Include
         });
 
         File.WriteAllText(outputPath, json);
