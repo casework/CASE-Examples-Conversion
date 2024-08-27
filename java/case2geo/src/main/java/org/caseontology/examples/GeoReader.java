@@ -87,7 +87,7 @@ public class GeoReader {
             List<GeoRecord> records = resultToObjects(result);
 
             // Convert the list of GeoRecord objects to a GeoJSON string and return the string
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create();
             Root geoJSON = recordsToGeoJSON(records);
             return gson.toJson(geoJSON);
         } catch (IOException e) {
