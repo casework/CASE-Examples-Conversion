@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List
 
 from geotypes import GeoRecord
-from geoutilities import records_to_geojson, remove_nulls
+from geoutilities import records_to_geojson
 from rdflib import Graph
 from rdflib.query import ResultRow
 
@@ -81,9 +81,7 @@ for row in results:
 # Convert the data to a GeoJSON structured object
 geoJSON = records_to_geojson(records)
 
-# Remove null values from the GeoJSON object
-geoDict: dict = geoJSON.reprJSON()
-geoDict = remove_nulls(geoDict)
+geoDict: dict = geoJSON.reprJSON(remove_nulls=True)
 
 # Write the GeoJSON object to the output file
 with open(output_filename, "w") as output_file:
