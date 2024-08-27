@@ -17,7 +17,7 @@ jobs:
         # https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core
         dotnet-version:
           - '6.x'
-          - '7.x'
+          - '8.x'
     steps:
 
       # Get the code from the repository
