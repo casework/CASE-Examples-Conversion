@@ -3,8 +3,22 @@
     {
       "type": "Feature",
       "properties": {
+        "addressType": null,
+        "street": "20341 Whitworth Institute 405 N. Whitworth",
+        "locality": "Seattle",
+        "region": "WA",
+        "postalCode": "98052",
+        "country": null
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "addressType": null,
         "street": "38 Bad Guy Headquarters st.",
         "locality": "Paris",
+        "region": null,
         "postalCode": "F-75002",
         "country": "France"
       },
@@ -14,15 +28,6 @@
           2.331199,
           48.860346
         ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "street": "20341 Whitworth Institute 405 N. Whitworth",
-        "locality": "Seattle",
-        "region": "WA",
-        "postalCode": "98052"
       }
     }
   ],

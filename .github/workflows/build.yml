@@ -103,3 +103,20 @@ jobs:
             java -jar ./target/case2geo-0.1.0.jar ../../data/geo.json ../../output/java.geojson
             cat ../../output/java.geojson
         working-directory: ./java/case2geo/
+
+  geojson-validation:
+    runs-on: ubuntu-latest
+    needs: [dotnet, java, python]
+    steps:
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v4
+
+      # Install Python
+      - name: Setup Python
+        uses: actions/setup-python@v5.1.1
+        with:
+          python-version: '3.12'
+
+      - name: Validate
+        run: make --keep-going check

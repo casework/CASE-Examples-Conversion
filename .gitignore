@@ -13,3 +13,6 @@ dotnet/obj
 
 # Java
 java/**/target
+
+*.log
+*.swp

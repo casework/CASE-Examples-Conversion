@@ -87,7 +87,7 @@ public class GeoReader {
             List<GeoRecord> records = resultToObjects(result);
 
             // Convert the list of GeoRecord objects to a GeoJSON string and return the string
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create();
             Root geoJSON = recordsToGeoJSON(records);
             return gson.toJson(geoJSON);
         } catch (IOException e) {
@@ -194,6 +194,7 @@ public class GeoReader {
             // Only add the coordinates if the latitude and longitude are not null
             if (record.Latitude != null && record.Longitude != null) {
                 feature.geometry = new Geometry();
+                feature.geometry.type = "Point";
                 feature.geometry.coordinates = Arrays.asList(Double.parseDouble(record.Longitude),
                         Double.parseDouble(record.Latitude));
             }
