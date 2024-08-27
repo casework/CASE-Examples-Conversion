@@ -1,11 +1,13 @@
 import json
 import sys
 from os.path import exists, isdir, isfile
+from pathlib import Path
 from typing import List
 
 from geotypes import GeoRecord
 from geoutilities import records_to_geojson, remove_nulls
 from rdflib import Graph
+from rdflib.query import ResultRow
 
 # Parse the arguments from the CLI to get the input and output filenames
 if len(sys.argv) != 3:
@@ -21,7 +23,7 @@ if not exists(input_filename) and not isfile(input_filename):
     sys.exit(1)
 
 # Ensure the output directory exists
-output_directory: str = output_filename[: output_filename.rfind("/")]
+output_directory: str = str(Path(output_filename).parent.absolute())
 if not exists(output_directory) and not isdir(output_directory):
     print(f"Directory not found: {output_directory}")
     sys.exit(1)
@@ -64,6 +66,7 @@ records: List[GeoRecord] = []
 
 # Loop through the results and add them to the list of GeoRecords if the latitude and longitude are present
 for row in results:
+    assert isinstance(row, ResultRow)
     geo_record: GeoRecord = GeoRecord()
     geo_record.Latitude = row.lLatitude
     geo_record.Longitude = row.lLongitude
