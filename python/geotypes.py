@@ -95,5 +95,8 @@ class GeoJSON:
         Provide a helper function to convert the properties into a dictionary so that the object can be JSON serialized.
         """
         return dict(
-            type=self.type, features=[feature.reprJSON(remove_nulls=remove_nulls) for feature in self.features]
+            type=self.type,
+            features=[
+                feature.reprJSON(remove_nulls=remove_nulls) for feature in self.features
+            ],
         )
