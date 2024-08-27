@@ -8,7 +8,8 @@
                 "locality": "Seattle",
                 "region": "WA",
                 "postalCode": "98052"
-            }
+            },
+            "geometry": null
         },
         {
             "type": "Feature",
