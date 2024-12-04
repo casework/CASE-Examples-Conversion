@@ -1,0 +1,37 @@
+{
+    "$id": "http://example.org/schema/case-example",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Experimental schema for testing import strategies.",
+    "type": "object",
+    "properties": {
+        "@context": {
+            "type": "object"
+        },
+        "@graph": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@type": {
+                        "$ref": "#/$defs/@type"
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "@context",
+        "@graph"
+    ],
+    "$defs": {
+        "@id": {
+            "type": "string"
+        },
+        "@type": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}
