@@ -16,7 +16,6 @@ jobs:
         # Test oldest and most current supported versions, per:
         # https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core
         dotnet-version:
-          - '6.x'
           - '8.x'
     steps:
 
