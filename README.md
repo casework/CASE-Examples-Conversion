@@ -10,6 +10,7 @@ This repository provides example scripts for extracting information from CASE gr
 - `dotnet` - C# implementation using the dotNetRDF library
 - `java` - Java implementation using the Apache Jena library
 - `python` - Python implementation using the RDFLib library
+- `rust` - Rust implementation using a pipeline of multiple libraries
 
 Each directory contains the code to convert a CASE graph to a specific output format after storing them in intermediary types. The general process is:
 
