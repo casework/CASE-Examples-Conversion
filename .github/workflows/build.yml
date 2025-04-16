@@ -103,9 +103,46 @@ jobs:
             cat ../../output/java.geojson
         working-directory: ./java/case2geo/
 
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Get the code from the repository
+      - name: Get Repo
+        uses: actions/checkout@v4
+
+      # Cargo installation logistics c/o:
+      # https://github.com/oxigraph/oxigraph/blob/v0.4.9/.github/actions/setup-rust/action.yml#L21
+
+      # Install Cargo
+      - name: Setup Rust
+        run: which cargo || sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cargo
+
+      # Steps below can all be run in a local development environment by
+      # running `make` in ./rust/case2geojson.
+
+      # Test the project
+      - name: Test Project
+        run: |
+            cargo check
+            cargo test
+        working-directory: ./rust/case2geojson/
+
+      # Build the project
+      - name: Build Project
+        run: cargo build
+        working-directory: ./rust/case2geojson/
+
+      # Run the Rust CASE conversion example
+      - name: Run CASE Conversion
+        run: |
+            target/debug/case2geojson ../../data/geo.json ../../output/rust.geojson
+            cat ../../output/rust.geojson
+        working-directory: ./rust/case2geojson/
+
   geojson-validation:
     runs-on: ubuntu-latest
-    needs: [dotnet, java, python]
+    needs: [dotnet, java, python, rust]
     steps:
       # Get the code from the repository
       - name: Get Repo
