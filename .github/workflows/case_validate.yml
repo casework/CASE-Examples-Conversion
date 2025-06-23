@@ -15,7 +15,7 @@ jobs:
 
       # Get the code from the repository to be packaged
       - name: Get Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Validate the CASE graphs in the /data/ directory
       - name: CASE Validate
