@@ -682,9 +682,8 @@ checksum = "73267b6bffa5356bd46cfa89386673e9a7f62f4eb3adcb45b1bd031892357853"
 
 [[package]]
 name = "json-ld"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a5c23bd3696fabd231e88dc57a893455af22509aae15578f94ce47b9c821e705"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "contextual",
  "futures",
@@ -703,9 +702,8 @@ dependencies = [
 
 [[package]]
 name = "json-ld-compaction"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad3ab3dfb6249b1e53359c06c2c3c554d3704b64c9d17cb9eaa624248b6161cf"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "contextual",
  "educe 0.4.23",
@@ -725,9 +723,8 @@ dependencies = [
 
 [[package]]
 name = "json-ld-context-processing"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6dac28ce9f01c5bb4f54804817e15c0f94697aaca8e42a4ca56913297b2b4e1e"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "contextual",
  "futures",
@@ -735,16 +732,14 @@ dependencies = [
  "json-ld-core",
  "json-ld-syntax",
  "mown",
- "owning_ref",
  "rdf-types",
  "thiserror 1.0.69",
 ]
 
 [[package]]
 name = "json-ld-core"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f0b91506169548cf5636661a5911bfeb65468a3f14801514583c113b6592c366"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "contextual",
  "educe 0.4.23",
@@ -770,9 +765,8 @@ dependencies = [
 
 [[package]]
 name = "json-ld-expansion"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ff5d4c0d8331a9d15ab34bd8cd7c11b6512f07e7e0a7f5a63350c2632635bf0b"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "contextual",
  "educe 0.4.23",
@@ -791,9 +785,8 @@ dependencies = [
 
 [[package]]
 name = "json-ld-serialization"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "344f0a6042745d76a358b808878ae0d125a472de30b3eabc9eb82c6cf7f0c23e"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "indexmap 2.9.0",
  "iref",
@@ -807,9 +800,8 @@ dependencies = [
 
 [[package]]
 name = "json-ld-syntax"
-version = "0.21.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fbff6d43084d4c04c3ffbdcd8031dd187c4a8c6f43d5c5585be230949c573747"
+version = "0.21.1"
+source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
 dependencies = [
  "contextual",
  "decoded-char",
@@ -1138,15 +1130,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1e1c390732d15f1d48471625cd92d154e66db2c56645e29a9cd26f4699f72dc"
 dependencies = [
  "num-traits",
-]
-
-[[package]]
-name = "owning_ref"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6ff55baddef9e4ad00f88b6c743a2a8062d4c6ade126c2a528644b8e444d52ce"
-dependencies = [
- "stable_deref_trait",
 ]
 
 [[package]]
@@ -1698,12 +1681,6 @@ dependencies = [
  "rand",
  "spargebra",
 ]
-
-[[package]]
-name = "stable_deref_trait"
-version = "1.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "static-iref"
