@@ -51,7 +51,7 @@ jobs:
         # https://github.com/casework/CASE-Utilities-Python/blob/main/setup.cfg
         python-version:
           - '3.10'
-          - '3.13'
+          - '3.14'
     steps:
 
       # Get the code from the repository
