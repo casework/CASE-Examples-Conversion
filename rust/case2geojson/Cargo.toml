@@ -10,4 +10,4 @@ json-ld = { git = "https://github.com/miterst/json-ld.git", rev = "6b48152595b66
 oxigraph = { version = "0.4.1", default-features = false}
 serde_json = "1.0.135"
 static-iref = "3.0.0"
-tokio = { version = "1.41.1", features = ["macros", "rt-multi-thread", "test-util"] }
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread", "test-util"] }
