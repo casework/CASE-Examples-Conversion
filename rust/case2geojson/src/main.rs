@@ -26,7 +26,7 @@ use json_ld::{
     JsonLdProcessor, RemoteDocument,
 };
 use oxigraph::model::{GraphNameRef, LiteralRef, NamedNodeRef, QuadRef};
-use oxigraph::sparql::QueryResults;
+use oxigraph::sparql::{QueryResults, SparqlEvaluator};
 use oxigraph::store::Store;
 use static_iref::iri;
 use std::{env, fs};
@@ -153,7 +153,13 @@ WHERE
 "#;
 
     // SPARQL query
-    if let QueryResults::Solutions(solutions) = store.query(query).unwrap() {
+    if let QueryResults::Solutions(solutions) = SparqlEvaluator::new()
+        .parse_query(query)
+        .expect("SPARQL syntax expected to be OK")
+        .on_store(&store)
+        .execute()
+        .expect("SPARQL expected to execute")
+    {
         for option_solution in solutions {
             let solution = option_solution.unwrap();
 
@@ -387,8 +393,8 @@ mod tests {
         );
 
         let store = Store::new()?;
-        assert!(store.insert(quad0)?);
-        assert!(!store.insert(quad1)?);
+        store.insert(quad0)?;
+        store.insert(quad1)?;
 
         assert!(store.contains(quad2)?);
         Result::<_, Box<dyn std::error::Error>>::Ok(())
@@ -425,7 +431,13 @@ WHERE {
         ))?;
 
         // SPARQL query
-        if let QueryResults::Solutions(mut solutions) = store.query(query)? {
+        if let QueryResults::Solutions(mut solutions) = SparqlEvaluator::new()
+            .parse_query(query)
+            .expect("SPARQL syntax expected to be OK")
+            .on_store(&store)
+            .execute()
+            .expect("SPARQL expected to execute")
+        {
             assert_eq!(
                 solutions.next().unwrap()?.get("nLocation"),
                 Some(&n_kb_location.into_owned().into())
