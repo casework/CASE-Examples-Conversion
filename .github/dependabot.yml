@@ -5,6 +5,10 @@
 
 version: 2
 updates:
+  - package-ecosystem: "cargo"
+    directory: "/rust/case2geojson/"
+    schedule:
+      interval: "weekly"
   - package-ecosystem: "maven"
     directory: "/java/case2geo/"
     schedule:
