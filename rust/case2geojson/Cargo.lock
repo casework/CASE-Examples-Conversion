@@ -1092,9 +1092,9 @@ dependencies = [
 
 [[package]]
 name = "oxigraph"
-version = "0.5.2"
+version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dd894a613f26824b6b373ea2c5f3234abe5199669d2d45e81c066bc116224f8c"
+checksum = "9af8920323420fe32d9da1deb5e4b01ed84d539d4651878dd63a1c8db5dbd7ac"
 dependencies = [
  "dashmap",
  "getrandom 0.3.4",
@@ -1623,9 +1623,9 @@ dependencies = [
 
 [[package]]
 name = "spareval"
-version = "0.2.2"
+version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9014a55e3f69ebb491768d80690aab9f93b7b7479b0b344e2ad09eee439a5f42"
+checksum = "e1b4df2d6e3259f36f472345c7fbafee300c939e02e2ae9d6c1d871378193a7d"
 dependencies = [
  "hex",
  "json-event-parser",
@@ -1646,9 +1646,9 @@ dependencies = [
 
 [[package]]
 name = "spargebra"
-version = "0.4.2"
+version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1f870f0c4790ff7de07b205b1502f1eae114849ea6ba278327aa45c091ecfeb1"
+checksum = "19ef1b6fa0fc31c5bb4c03d4a88034121fb68c4092d7799884b60f67f2a53684"
 dependencies = [
  "oxilangtag",
  "oxiri",
@@ -1660,9 +1660,9 @@ dependencies = [
 
 [[package]]
 name = "sparopt"
-version = "0.3.2"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "559d593b1ed5806562944a3ea831dbce356f9c079e92fb32814fafe4a9f84ea5"
+checksum = "564b6144ada529f4339c404a91b460d6fb3e3efc610145c5e48ec88309559e22"
 dependencies = [
  "oxrdf",
  "rand",
