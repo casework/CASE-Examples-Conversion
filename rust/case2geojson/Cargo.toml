@@ -7,7 +7,7 @@ edition = "2021"
 geojson = "0.24.1"
 iref = "3.2.2"
 json-ld = { git = "https://github.com/miterst/json-ld.git", rev = "6b48152595b661ae5ada46747e15f373e698d151" }
-oxigraph = { version = "0.5.4", default-features = false}
+oxigraph = { version = "0.5.5", default-features = false}
 serde_json = "1.0.149"
 static-iref = "3.0.0"
 tokio = { version = "1.49.0", features = ["macros", "rt-multi-thread", "test-util"] }
