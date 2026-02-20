@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 geojson = "0.24.1"
 iref = "3.2.2"
-json-ld = { git = "https://github.com/miterst/json-ld.git", rev = "6b48152595b661ae5ada46747e15f373e698d151" }
+json-ld = { version = "0.21.4" }
 oxigraph = { version = "0.5.5", default-features = false}
 serde_json = "1.0.149"
 static-iref = "3.0.0"

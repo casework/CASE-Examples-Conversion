@@ -658,8 +658,9 @@ checksum = "574b0cd5e90ee2ba03a66d0611fc9a09c9a0c28b2ecc2dc8a181dd31a53ca5d7"
 
 [[package]]
 name = "json-ld"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c3f0afe72eef988fd8fc4341b8c8b25c00820085eb32d3e6d8db1d619e34ecbe"
 dependencies = [
  "contextual",
  "futures",
@@ -678,8 +679,9 @@ dependencies = [
 
 [[package]]
 name = "json-ld-compaction"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6831bfe661d6eddf97a464a78c2f4d176ed3108a11a131d4ccf6ed0964c539be"
 dependencies = [
  "contextual",
  "educe 0.4.23",
@@ -699,8 +701,9 @@ dependencies = [
 
 [[package]]
 name = "json-ld-context-processing"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "794733ae1552eb7252972da511dfe1c65ec793e21fd025f732534e994d0abe93"
 dependencies = [
  "contextual",
  "futures",
@@ -714,8 +717,9 @@ dependencies = [
 
 [[package]]
 name = "json-ld-core"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d2fd4844d9f3707f191433166deadd2c3ac5911e486ef74ce7ec6657018fafdf"
 dependencies = [
  "contextual",
  "educe 0.4.23",
@@ -741,8 +745,9 @@ dependencies = [
 
 [[package]]
 name = "json-ld-expansion"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e482c6e543230837bb5fd396ea81c50065c0eadcf29ebb3cb03a7192c2a08ca"
 dependencies = [
  "contextual",
  "educe 0.4.23",
@@ -761,8 +766,9 @@ dependencies = [
 
 [[package]]
 name = "json-ld-serialization"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5ebec38a2fe2ce7dac0a7d341734a526d52c7902e9e37e6904a5eae647f09234"
 dependencies = [
  "indexmap 2.9.0",
  "iref",
@@ -776,8 +782,9 @@ dependencies = [
 
 [[package]]
 name = "json-ld-syntax"
-version = "0.21.1"
-source = "git+https://github.com/miterst/json-ld.git?rev=6b48152595b661ae5ada46747e15f373e698d151#6b48152595b661ae5ada46747e15f373e698d151"
+version = "0.21.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8ff77483915da2aac8239cf5e33a631cb8bfa1db23c559539d3f1ffb36f63c00"
 dependencies = [
  "contextual",
  "decoded-char",
