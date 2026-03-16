@@ -1099,9 +1099,9 @@ dependencies = [
 
 [[package]]
 name = "oxigraph"
-version = "0.5.5"
+version = "0.5.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6fc469ce2bd9a73e7384894f2b2cd1af19c3d39298132eab60120934615795ef"
+checksum = "2212dc588a16f421dbb35070115aad7704d5f7933448975333d1f991458e3575"
 dependencies = [
  "dashmap",
  "getrandom 0.3.4",
@@ -1136,9 +1136,9 @@ checksum = "54b4ed3a7192fa19f5f48f99871f2755047fabefd7f222f12a1df1773796a102"
 
 [[package]]
 name = "oxjsonld"
-version = "0.2.3"
+version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4490f5bd41c014dcb8136496fee2d83b16c0c8e8e6af8c17c1a42ebbb38616b4"
+checksum = "2d6e5adf22439ff21ba9f9b5a3dfb456f6558b7779a8a30ec2bee7177df0c1aa"
 dependencies = [
  "json-event-parser",
  "oxiri",
@@ -1164,9 +1164,9 @@ dependencies = [
 
 [[package]]
 name = "oxrdfio"
-version = "0.2.3"
+version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe672891f0997d9258e91fadd77e66d24b99aa014ce73deed35b99b906276885"
+checksum = "0f196c8d9a701c442fe3700d28afce82859926f4ddcbedf30c898a045c9339bf"
 dependencies = [
  "oxjsonld",
  "oxrdf",
@@ -1633,9 +1633,9 @@ dependencies = [
 
 [[package]]
 name = "spareval"
-version = "0.2.5"
+version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8944028deef237e33c7d3cf805d8f7cbc83f4f48591e3e030c50a25be437959f"
+checksum = "c8eab80b96dc836e4cf8fda72daa67ccc0244dc5303be5d4566e8fd04adbdde5"
 dependencies = [
  "hex",
  "json-event-parser",
@@ -1656,9 +1656,9 @@ dependencies = [
 
 [[package]]
 name = "spargebra"
-version = "0.4.5"
+version = "0.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e9a6bc0ae1da1bf2516fb872d2ad0cf5efa3c7a7dbea58909b39eed321dc5117"
+checksum = "46715eb957d1fe960cbbc0b713da8f78e2cb19df315b48fb09c9467a1c84f656"
 dependencies = [
  "oxilangtag",
  "oxiri",
@@ -1670,9 +1670,9 @@ dependencies = [
 
 [[package]]
 name = "sparopt"
-version = "0.3.5"
+version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a92f04f2f713fa83c9e2eda54978bc990fe801a23186bb7893530797b97ebcb"
+checksum = "aed7a854b8ea67618f8ce69aabb0e904d7704226060e9d5a2930eb3136c3fa3b"
 dependencies = [
  "oxrdf",
  "rand",
