@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-geojson = "0.24.1"
+geojson = "1.0.0"
 iref = "3.2.2"
 json-ld = { version = "0.21.4" }
 oxigraph = { version = "0.5.6", default-features = false}

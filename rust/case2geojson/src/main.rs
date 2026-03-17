@@ -187,10 +187,7 @@ WHERE
 
                     let f_latitude = (s_latitude).parse::<f64>().unwrap();
                     let f_longitude = (s_longitude).parse::<f64>().unwrap();
-                    gj_point = Some(geojson::Geometry::new(geojson::Value::Point(vec![
-                        f_longitude,
-                        f_latitude,
-                    ])));
+                    gj_point = Some(geojson::Geometry::new_point([f_longitude, f_latitude]));
                 };
             };
 
