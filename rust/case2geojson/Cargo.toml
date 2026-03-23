@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 geojson = "1.0.0"
-iref = "3.2.2"
+iref = "4.0.0"
 json-ld = { version = "0.21.4" }
 oxigraph = { version = "0.5.6", default-features = false}
 serde_json = "1.0.149"
