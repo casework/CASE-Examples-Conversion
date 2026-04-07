@@ -10,4 +10,4 @@ json-ld = { version = "0.21.4" }
 oxigraph = { version = "0.5.6", default-features = false}
 serde_json = "1.0.149"
 static-iref = "3.0.0"
-tokio = { version = "1.50.0", features = ["macros", "rt-multi-thread", "test-util"] }
+tokio = { version = "1.51.0", features = ["macros", "rt-multi-thread", "test-util"] }
