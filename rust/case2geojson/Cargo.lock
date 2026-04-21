@@ -1213,9 +1213,9 @@ dependencies = [
 
 [[package]]
 name = "oxigraph"
-version = "0.5.6"
+version = "0.5.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2212dc588a16f421dbb35070115aad7704d5f7933448975333d1f991458e3575"
+checksum = "4f004ff4aaae62ac9c7c69a37eea6fa0c2113d854d298e95fa91b6a5374bb358"
 dependencies = [
  "dashmap",
  "getrandom 0.3.4",
@@ -1250,9 +1250,9 @@ checksum = "54b4ed3a7192fa19f5f48f99871f2755047fabefd7f222f12a1df1773796a102"
 
 [[package]]
 name = "oxjsonld"
-version = "0.2.4"
+version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d6e5adf22439ff21ba9f9b5a3dfb456f6558b7779a8a30ec2bee7177df0c1aa"
+checksum = "f6e1380a504a8571763f13b8bcad629ff90d0300d47d8a519f3c6c599625840e"
 dependencies = [
  "json-event-parser",
  "oxiri",
@@ -1278,9 +1278,9 @@ dependencies = [
 
 [[package]]
 name = "oxrdfio"
-version = "0.2.4"
+version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f196c8d9a701c442fe3700d28afce82859926f4ddcbedf30c898a045c9339bf"
+checksum = "696223589ecbcab06b1a5df9b527dc25b0c656160cca38752fdb3878a5d3dd03"
 dependencies = [
  "oxjsonld",
  "oxrdf",
