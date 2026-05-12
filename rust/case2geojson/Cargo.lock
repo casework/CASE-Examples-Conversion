@@ -1213,9 +1213,9 @@ dependencies = [
 
 [[package]]
 name = "oxigraph"
-version = "0.5.7"
+version = "0.5.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f004ff4aaae62ac9c7c69a37eea6fa0c2113d854d298e95fa91b6a5374bb358"
+checksum = "b4ee83ce0422e6dce39a325810a9c66af71577a0a6fb5d887764bf3ae6304667"
 dependencies = [
  "dashmap",
  "getrandom 0.3.4",
